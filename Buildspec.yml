@@ -1,20 +1,19 @@
 Version: 0.2
-	Phases:
-	  install:
-	    runtime-versions:
-	      python: 3.8
-	  pre_build:
-	    commands:
-	      - pip3 install --upgrade pip
-	      - pip3 install requests[security]
-	      - pip3 install ansible
-	      - pip3 install boto
-	      - pip3 install boto3
-	      - yum clean all
-	      - yum -y install curl
-	      - yum -y install jq
-	  build:
-	    commands:
-	      - chmod +x s3bucket.py
-	      - python s3bucket.py
-
+Phases:
+  install:
+    runtime-versions:
+      python: 3.8
+  pre_build:
+    commands:
+      - pip3 install --upgrade pip
+      - pip3 install requests[security]
+      - pip3 install ansible
+      - pip3 install boto
+      - pip3 install boto3
+      - yum clean all
+      - yum -y install curl
+      - yum -y install jq
+  build:
+    commands:
+      - chmod +x s3bucket.py
+      - python s3bucket.py

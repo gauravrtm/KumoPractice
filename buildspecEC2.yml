@@ -15,5 +15,5 @@ Phases:
       - yum -y install jq
   build:
     commands:
-      - chmod +x s3bucket.py
-      - python EC2.py
+      - chmod +x ec2.py
+      - python ec2.py
